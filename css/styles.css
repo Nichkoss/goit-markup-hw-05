@@ -522,7 +522,7 @@ button:hover,button:focus{
     background: var(--bg-light-cloud);
     color: var(--activate-iris);
     border: 1px solid var(--accent);
-    transition: color var(--anim), box-shadow var(--anim);
+    transition: color var(--anim), box-shadow var(--anim), background var(--anim);
 }
 
 .ctg-btn:hover,
@@ -563,6 +563,37 @@ img {
     display: block;
     max-width: 100%;
     height: auto;
+}
+
+/*Overlay card*/
+.portfolio-overlay-div{
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-card-overlay{
+    background-color: var(--activate-iris);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    color: #F4F4FD;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    transform: translate(0, 100%);
+    transition: transform var(--anim);
+
+}
+
+.card-link:hover .portfolio-card-overlay,
+.card-link:focus .portfolio-card-overlay{
+    transform: translate(0, 0);
 }
 
 /*Modal*/
